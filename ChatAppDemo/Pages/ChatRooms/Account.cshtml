@@ -1,0 +1,18 @@
+﻿@page
+@model ChatAppDemo.Pages.ChatRooms.AccountModel
+@{
+}
+
+<h1>Account</h1>
+
+<form method="post">
+    <label for="old-passowrd">Old password: </label>
+    <input type="password" id="old-password" asp-for="@Model.OldPassword" />
+    <label for="new-passowrd">New password: </label>
+    <input type="password" id="new-password" asp-for="@Model.NewPassword" />
+    <button class="btn btn-primary">Change password</button>
+</form>
+
+<form method="post">
+    <button class="btn btn-outline-danger" asp-page-handler="SignOut">Sign Out</button>
+</form>
